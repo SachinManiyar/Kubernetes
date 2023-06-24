@@ -1,0 +1,16 @@
+apiVersion:v1
+kind: pod
+metadata:
+  name : TestApp
+  labels:
+    role : test
+specs:
+  container:
+    - name : node
+      image : nginx
+      ports:
+      -  name : node
+          containerPort - 80
+          protocol - TCP
+
+    
