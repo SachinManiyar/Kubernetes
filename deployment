@@ -1,0 +1,25 @@
+apiVersion:
+kind: deployment
+metadata :
+  name : frontend-deployment
+  labels:
+    app : nginx
+specs:
+  replicas:3
+    selector: 
+      matchlebales:
+        app : nginx
+      template:
+        metadata:
+          labels:
+            app : nginx
+         spec:
+            containers:
+              -name : nginx
+                image : nginx
+                  ports :
+                  - port:8080
+                    containerPort:80
+                    targetPort:80
+
+          
